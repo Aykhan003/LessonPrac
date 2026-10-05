@@ -14,5 +14,15 @@ internal class Student
         Age = age;
         Grade = grade;
     }
-
+    public void ShowInfo()
+    {
+        Console.WriteLine($"Id: {Id}");
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Age: {Age}");
+        Console.WriteLine($"Grade: {Grade}");
+    }
+    public bool IsPassed()
+    {
+        return Grade >= 51;
+    }
 }
