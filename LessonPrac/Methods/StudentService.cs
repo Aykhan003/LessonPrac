@@ -23,4 +23,17 @@ internal class StudentService
         _students.Remove(student);
         Console.WriteLine("Student removed.");
     }
+    public Student GetStudent(int id)
+    {
+        return _students.FirstOrDefault(x => x.Id == id);
+    }
+
+    public void ShowAllStudents()
+    {
+        foreach (Student student in _students)
+        {
+            student.ShowInfo();
+            Console.WriteLine("----------------");
+        }
+    }
 }
