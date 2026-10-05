@@ -36,4 +36,20 @@ internal class StudentService
             Console.WriteLine("----------------");
         }
     }
+    public double GetAverageGrade()
+    {
+        if (_students.Count == 0)
+        {
+            return 0;
+        }
+
+        double sum = 0;
+
+        foreach (Student student in _students)
+        {
+            sum += student.Grade;
+        }
+
+        return sum / _students.Count;
+    }
 }
